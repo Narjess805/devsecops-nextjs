@@ -2,6 +2,13 @@ import Link from "next/link";
 import { projects } from "../../data/projects";
 import { notFound } from "next/navigation";
 
+// 🔑 AJOUT : dire à Next.js quels slugs pré-générer
+export function generateStaticParams() {
+  return projects.map((project) => ({
+    slug: project.slug,
+  }));
+}
+
 export default async function ProjectDetail({
   params,
 }: {

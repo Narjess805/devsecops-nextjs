@@ -13,7 +13,7 @@ pipeline {
         stage('Install') {
             steps {
                 echo ' Installation des dépendances...'
-                sh 'npm install'
+                sh 'npm install --fetch-timeout=600000 --fetch-retries=5'
             }
         }
 
