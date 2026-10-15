@@ -1,8 +1,23 @@
 export default function Header() {
   return (
-    <header className="p-6 border-b bg-white">
-      <h1 className="text-3xl font-bold text-gray-900">Narjess Dabbech</h1>
-      <p className="text-gray-600 mt-1">Étudiant(e) ingénieur · DevSecOps</p>
+    <header className="header">
+      <div className="header-inner">
+        <h1>Narjess Dabbech</h1>
+        <p className="role">Étudiant(e) ingénieur · DevSecOps</p>
+        <div className="header-actions">
+          <a
+            href="https://github.com/Narjess805"
+            target="_blank"
+            rel="noopener"
+            className="btn btn-primary"
+          >
+            🐙 GitHub
+          </a>
+          <a href="mailto:narjessdabbech3@gmail.com" className="btn btn-outline">
+            ✉️ Me contacter
+          </a>
+        </div>
+      </div>
     </header>
   );
 }

@@ -1,22 +1,65 @@
+"use client";
+import { useEffect, useState } from "react";
 import Link from "next/link";
-import { projects } from "../data/projects";
+
+type Project = {
+  slug: string;
+  name: string;
+  description: string;
+  tech: string[];
+  link: string;
+};
+
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000";
 
 export default function Projects() {
+  const [projects, setProjects] = useState<Project[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch(`${API_URL}/api/projects`)
+      .then((res) => res.json())
+      .then((data) => {
+        setProjects(data);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error(err);
+        setLoading(false);
+      });
+  }, []);
+
   return (
-    <section id="projects" className="p-6 max-w-3xl mx-auto">
-      <h2 className="text-2xl font-semibold mb-3 text-gray-900">Projets</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {projects.map((p) => (
-          <Link
-            key={p.slug}
-            href={`/projects/${p.slug}`}
-            className="border rounded-lg p-4 hover:shadow-lg transition-shadow bg-white"
-          >
-            <h3 className="font-bold text-gray-900">{p.name}</h3>
-            <p className="text-sm text-gray-600 mt-1">{p.description}</p>
-          </Link>
-        ))}
-      </div>
+    <section className="section">
+      <h2 className="section-title">
+        <span className="icon">📁</span> Projets
+      </h2>
+
+      {loading ? (
+        <div className="loading">
+          <div className="spinner"></div>
+          Chargement...
+        </div>
+      ) : (
+        <div className="projects-grid">
+          {projects.map((p) => (
+            <Link
+              key={p.slug}
+              href={`/projects/${p.slug}`}
+              className="project-card"
+            >
+              <h3>{p.name}</h3>
+              <p>{p.description}</p>
+              <ul className="project-tech">
+                {p.tech.map((t) => (
+                  <li key={t}>{t}</li>
+                ))}
+              </ul>
+              <span className="project-link">Voir le projet →</span>
+            </Link>
+          ))}
+        </div>
+      )}
     </section>
   );
 }

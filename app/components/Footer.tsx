@@ -1,7 +1,12 @@
 export default function Footer() {
   return (
-    <footer className="p-6 border-t text-center text-sm text-gray-500">
-      © 2026 Narjess Dabbech — DevSecOps Portfolio
+    <footer className="footer">
+      <p>
+        © 2026 <span className="footer-name">Narjess Dabbech</span> — DevSecOps Portfolio
+      </p>
+      <p className="footer-sub">
+        Built with Next.js · Powered by Express API · Deployed via Jenkins
+      </p>
     </footer>
   );
 }
