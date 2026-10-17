@@ -2,7 +2,7 @@
 
 Portfolio DevSecOps migré vers **Next.js 16** avec TypeScript + Tailwind CSS.
 
-## 🚀 Stack technique
+##  Stack technique
 
 - **Next.js 16** (App Router)
 - **TypeScript**
@@ -10,7 +10,7 @@ Portfolio DevSecOps migré vers **Next.js 16** avec TypeScript + Tailwind CSS.
 - **ESLint**
 - **Node.js 20**
 
-## 📁 Structure du projet
+##  Structure du projet
 
 ```
 devsecops-nextjs/
@@ -38,7 +38,7 @@ devsecops-nextjs/
 └── tsconfig.json
 ```
 
-## 🚀 Installation (Activité 18)
+##  Installation (Activité 18)
 
 ```bash
 # Vérifier Node.js
@@ -61,7 +61,7 @@ Accès : http://192.168.56.101:3000
 **Page d'accueil par défaut :**
 ![Accueil Next.js](images/nextjs-home.png)
 
-## 🧩 Composants réutilisables (Activité 19)
+##  Composants réutilisables (Activité 19)
 
 Structure des composants dans `app/components/` :
 
@@ -99,7 +99,7 @@ export default function Home() {
 
 ![Composants](images/nextjs-components.png)
 
-## 📊 Fichiers de données séparés (Activité 20)
+##  Fichiers de données séparés (Activité 20)
 
 **`app/data/skills.ts` :**
 ```typescript
@@ -158,7 +158,7 @@ export const projects: Project[] = [
 
 ![Données](images/nextjs-data.png)
 
-## 🎨 Portfolio rendu
+##  Portfolio rendu
 
 ![Portfolio Next.js](images/nextjs-portfolio.png)
 
@@ -208,7 +208,7 @@ export default async function ProjectDetail({
 
 ![Détail projet](images/nextjs-project-detail.png)
 
-## 🧪 Lancer en développement
+##  Lancer en développement
 
 ```bash
 npm run dev
@@ -230,7 +230,7 @@ v20.20.2
 
 ---
 
-## 🚀 Premier pipeline Jenkins (Activités 22-24)
+##  Premier pipeline Jenkins (Activités 22-24)
 
 ### Configuration de la clé SSH Jenkins → GitHub
 
@@ -350,10 +350,10 @@ Ajout de l'étape `npm run build` pour construire l'application Next.js.
 
 ## 📌 Liens utiles
 
-- 🌐 Portfolio Next.js (local) : http://192.168.56.101:3000
-- 🎨 Portfolio HTML/CSS/JS : https://github.com/Narjess805/minicv
-- ⚙️ Jenkins : http://192.168.56.101:8080/job/devsecops-portfolio-pipeline/
-- 📦 Next.js : https://nextjs.org
+-  Portfolio Next.js (local) : http://192.168.56.101:3000
+-  Portfolio HTML/CSS/JS : https://github.com/Narjess805/minicv
+-  Jenkins : http://192.168.56.101:8080/job/devsecops-portfolio-pipeline/
+-  Next.js : https://nextjs.org
 
 ---
 
