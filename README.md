@@ -367,3 +367,4 @@ Ajout de l'étape `npm run build` pour construire l'application Next.js.
 ---
 
 **© 2026 Narjess Dabbech — DevSecOps Portfolio**
+aws_access_key_id = AKIAIOSFODNN7EXAMPLE
